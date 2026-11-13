@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqliteschemadiff"
+version = "1.0.0"
+description = "Compare two SQLite database schemas and report added, removed, or changed tables, columns, and indexes."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "SQLiteSchemaDiff contributors"}]
+
+[project.scripts]
+sqlite-schema-diff = "sqlite_schema_diff.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/SQLiteSchemaDiff"
+Issues = "https://github.com/bafnayeygian/SQLiteSchemaDiff/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
